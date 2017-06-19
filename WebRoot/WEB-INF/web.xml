@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+    <filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.lijy.user.filter.ErrorFilter</filter-class>
+		<init-param>
+		   <param-name>noLoginPath</param-name>
+		   <param-value>reset.css;main.css;login.action;logo.jpg;webLogo.jpg;index.jsp;login_btn.jpg;user_icon.jpg;listDep.jsp;listDept</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.lijy.user.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>deptAddServlet</servlet-name>
+  	<servlet-class>com.lijy.user.servlet.deptServlet.DeptAddServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	 <servlet-name>listDept</servlet-name>
+  	 <servlet-class>com.lijy.user.servlet.deptServlet.ListDeptServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>listServlet</servlet-name>
+    <servlet-class>com.lijy.user.servlet.ListServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>deptAddServlet</servlet-name>
+    <url-pattern>/deptAdd.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>listServlet</servlet-name>
+    <url-pattern>/List.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>listDept</servlet-name>
+    <url-pattern>/listDept.action</url-pattern>
+  </servlet-mapping>
+</web-app>
