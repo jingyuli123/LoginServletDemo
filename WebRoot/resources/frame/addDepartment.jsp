@@ -32,7 +32,7 @@
 			<tr>
 				<td align="right">
 					<a href="javascript:isubmit()" >保存</a> &nbsp;&nbsp;
-					<a href="listDep.jsp">退回 </a>
+					<a href="${pageContext.request.contextPath }/listDept.action">退回 </a>
 				</td>
 			</tr>
 		</table>
