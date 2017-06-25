@@ -3,6 +3,7 @@ package com.lijy.user.service;
 import java.util.List;
 
 import com.lijy.user.dao.DepartmentDao;
+import com.lijy.user.exception.MyException;
 import com.lijy.user.model.DepartmentBean;
 
 /**
@@ -24,6 +25,15 @@ public class DepartmentService {
 	public List<DepartmentBean> queryDepartmentList(){
 		DepartmentDao dao = new DepartmentDao();
 		return dao.queryDepartmentList();
+	}
+	
+	//删除部门
+	public void deleteOne(String deptName) {
+		if (deptName == null || "".equals(deptName)) {
+			throw new NullPointerException("部门名称为空！");
+		}
+		DepartmentDao dao = new DepartmentDao();
+		dao.deleteOne(deptName);
 	}
 	
 }
