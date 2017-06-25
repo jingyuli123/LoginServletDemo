@@ -10,7 +10,7 @@
 		<filter-class>com.lijy.user.filter.ErrorFilter</filter-class>
 		<init-param>
 		   <param-name>noLoginPath</param-name>
-		   <param-value>reset.css;main.css;login.action;logo.jpg;webLogo.jpg;index.jsp;login_btn.jpg;user_icon.jpg;listDep.jsp;listDept</param-value>
+		   <param-value>deleteOne;reset.css;main.css;login.action;logo.jpg;webLogo.jpg;index.jsp;login_btn.jpg;user_icon.jpg;listDep.jsp;listDept</param-value>
 		</init-param>
 	</filter>
 	<filter-mapping>
@@ -42,6 +42,12 @@
     <servlet-class>com.lijy.user.servlet.ListServlet</servlet-class>
   </servlet>
   
+  <!-- 删除单个部门 -->
+  <servlet>
+  	<servlet-name>deleteOne</servlet-name>
+  	<servlet-class>com.lijy.user.servlet.deptServlet.DeleteOneServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
   	<url-pattern>/login.action</url-pattern>
@@ -61,4 +67,10 @@
     <servlet-name>listDept</servlet-name>
     <url-pattern>/listDept.action</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>deleteOne</servlet-name>
+  	<url-pattern>/deleteOne.action</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
