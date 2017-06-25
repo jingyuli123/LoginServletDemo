@@ -9,6 +9,7 @@ bin-release/
 .settings/
 
 # Executables
+*.class
 *.swf
 *.air
 *.ipa
