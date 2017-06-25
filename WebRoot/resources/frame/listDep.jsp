@@ -42,7 +42,7 @@
 			</tr>
 			<tr>
 				<td align="right">
-					<a href="addDepartment.jsp">添加</a>
+					<a href="resources/frame/addDepartment.jsp">添加</a>
 					<a href="">删除</a>
 				</td>
 			</tr>
@@ -64,6 +64,9 @@
 			 		<td align="center">
 						<a href="editDept.jsp"><img
 								src="${pageContext.request.contextPath }/resources/images/edit.png" />
+						</a>
+						<a href="${pageContext.request.contextPath}/deleteOne.action?deptName=${department.deptName}"><img
+								src="${pageContext.request.contextPath }/resources/images/icon/j.png" />
 						</a>
 					</td>
 			 	</tr>
