@@ -10,6 +10,7 @@ bin-release/
 
 # Executables
 *.class
+WebRoot/WEB-INF/classes/
 *.swf
 *.air
 *.ipa
