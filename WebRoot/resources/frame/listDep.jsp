@@ -41,7 +41,7 @@
 		</script>
 	</head>
 	<body>
-	<form action="deleteBatch.action" id="mainForm">
+	
 		<table border="0" width="900px">
 			<tr>
 				<td align="center" style="font-size: 24px; color: #666">
@@ -56,7 +56,7 @@
 			</tr>
 		</table>
 		<br />
-		
+		<form action="deleteBatch.action" id="mainForm">
 		<table cellspacing="0" border="1" class="table1">
 			<thead>
 				<tr>
