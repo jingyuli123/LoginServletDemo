@@ -16,7 +16,6 @@
 	<script type="text/javascript">
 		
 		function isubmit(){
-		    alert(1);
 			document.getElementById("IForm").submit();
 		}
 	</script>
