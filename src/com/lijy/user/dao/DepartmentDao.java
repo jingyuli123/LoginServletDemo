@@ -102,6 +102,10 @@ public class DepartmentDao {
 		}
 	}
 	
+	public void deleteBatch() {
+		
+	}
+	
 	public static void main(String[] args) {
 		DepartmentDao departmentDao = new DepartmentDao();
 //		DepartmentBean bean = new DepartmentBean();
