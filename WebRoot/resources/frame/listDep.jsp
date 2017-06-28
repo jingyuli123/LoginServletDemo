@@ -15,7 +15,7 @@
 		}
 		</style>
 		<script type="text/javascript">
-			function deleteBatch(){
+			function all(){
 				var all = document.getElementById("all");
 				if (all.checked == true) {
 					var deptName = document.getElementsByName("deptName");
@@ -31,9 +31,17 @@
 					}
 				}
 			}
+			
+			function deleteBatch() {
+				//var deptName = document.getElementsByName("deptName");
+				document.getElementById("mainForm").submit();
+				
+			}
+			
 		</script>
 	</head>
 	<body>
+	<form action="deleteBatch.action" id="mainForm">
 		<table border="0" width="900px">
 			<tr>
 				<td align="center" style="font-size: 24px; color: #666">
@@ -43,15 +51,16 @@
 			<tr>
 				<td align="right">
 					<a href="resources/frame/addDepartment.jsp">添加</a>
-					<a href="">删除</a>
+					<a href="javascript:deleteBatch()">删除</a>
 				</td>
 			</tr>
 		</table>
 		<br />
+		
 		<table cellspacing="0" border="1" class="table1">
 			<thead>
 				<tr>
-					<th><input type="checkbox" id="all" onclick="deleteBatch()" /></th>
+					<th><input type="checkbox" id="all" onclick="all()" /></th>
 					<th width="450">部门名称</th>
 					<th width="450">编辑</th>
 				</tr>
@@ -74,6 +83,7 @@
 				
 			</tbody>
 		</table>
+		</form>
 		<br />
 
 
